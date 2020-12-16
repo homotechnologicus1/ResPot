@@ -14,6 +14,7 @@
 		D887F4AF257CF8AB004DDE17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D887F4AD257CF8AB004DDE17 /* LaunchScreen.storyboard */; };
 		D887F4B7257CFB0A004DDE17 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4B6257CFB0A004DDE17 /* RestaurantTableViewController.swift */; };
 		D887F4B9257D44CC004DDE17 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4B8257D44CC004DDE17 /* RestaurantTableViewCell.swift */; };
+		D8DBCCF9258A27BB00D1F125 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DBCCF8258A27BB00D1F125 /* Restaurant.swift */; };
 		D8F432072587D99100F7806D /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F432062587D99100F7806D /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		D887F4B0257CF8AB004DDE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D887F4B6257CFB0A004DDE17 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		D887F4B8257D44CC004DDE17 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		D8DBCCF8258A27BB00D1F125 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		D8F432062587D99100F7806D /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,17 +62,50 @@
 		D887F4A1257CF8AA004DDE17 /* ResPot */ = {
 			isa = PBXGroup;
 			children = (
+				D8DBCCFE258A498300D1F125 /* Storyboard */,
+				D8DBCCFC258A490100D1F125 /* Model */,
+				D8DBCCFD258A491C00D1F125 /* View */,
+				D8DBCCFB258A48AF00D1F125 /* Controller */,
 				D887F4A2257CF8AA004DDE17 /* AppDelegate.swift */,
 				D887F4A4257CF8AA004DDE17 /* SceneDelegate.swift */,
-				D887F4B6257CFB0A004DDE17 /* RestaurantTableViewController.swift */,
-				D887F4B8257D44CC004DDE17 /* RestaurantTableViewCell.swift */,
-				D8F432062587D99100F7806D /* RestaurantDetailViewController.swift */,
-				D887F4A8257CF8AA004DDE17 /* Main.storyboard */,
 				D887F4AB257CF8AB004DDE17 /* Assets.xcassets */,
-				D887F4AD257CF8AB004DDE17 /* LaunchScreen.storyboard */,
 				D887F4B0257CF8AB004DDE17 /* Info.plist */,
 			);
 			path = ResPot;
+			sourceTree = "<group>";
+		};
+		D8DBCCFB258A48AF00D1F125 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D887F4B6257CFB0A004DDE17 /* RestaurantTableViewController.swift */,
+				D8F432062587D99100F7806D /* RestaurantDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8DBCCFC258A490100D1F125 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8DBCCF8258A27BB00D1F125 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8DBCCFD258A491C00D1F125 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D887F4B8257D44CC004DDE17 /* RestaurantTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8DBCCFE258A498300D1F125 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D887F4A8257CF8AA004DDE17 /* Main.storyboard */,
+				D887F4AD257CF8AB004DDE17 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +181,7 @@
 			files = (
 				D887F4B9257D44CC004DDE17 /* RestaurantTableViewCell.swift in Sources */,
 				D887F4B7257CFB0A004DDE17 /* RestaurantTableViewController.swift in Sources */,
+				D8DBCCF9258A27BB00D1F125 /* Restaurant.swift in Sources */,
 				D8F432072587D99100F7806D /* RestaurantDetailViewController.swift in Sources */,
 				D887F4A3257CF8AA004DDE17 /* AppDelegate.swift in Sources */,
 				D887F4A5257CF8AA004DDE17 /* SceneDelegate.swift in Sources */,
