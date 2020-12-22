@@ -17,12 +17,22 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     var restaurant: Restaurant = Restaurant()
     
+//    override var preferredStatusBarStyle: UIStatusBarStyle {
+//        return .lightContent
+//    }
+    
     // MARK: - View controller life style
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
+        tableView.contentInsetAdjustmentBehavior = .never
         
         // Configure the table view
         tableView.delegate = self
@@ -34,6 +44,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.typeLabel.text = restaurant.type
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        navigationController?.navigationBar.barStyle = .black
     }
     
     override func didReceiveMemoryWarning() {

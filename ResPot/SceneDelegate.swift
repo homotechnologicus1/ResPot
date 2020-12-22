@@ -18,6 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let backButtonImage = UIImage(named: "back")
+        UINavigationBar.appearance().backIndicatorImage = backButtonImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backButtonImage
+        
+        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000.0, vertical: 0.0), for: .default)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
