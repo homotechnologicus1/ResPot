@@ -59,6 +59,10 @@ class RestaurantTableViewController: UITableViewController {
         
         navigationController?.navigationBar.barStyle = .default
     }
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
 
     // MARK: - UITableViewDataSource Protocol
 
