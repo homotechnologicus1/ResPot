@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -48,6 +49,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             descriptionTextView.layer.masksToBounds = true
         }
     }
+    
+    var restaurant: RestaurantMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +84,24 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         print("Location: \(addressTextField.text ?? "")")
         print("Phone: \(phoneTextField.text ?? "")")
         print("Description: \(descriptionTextView.text ?? "")")
+        
+        // Saving the restaurant to database
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+            restaurant.name = nameTextField.text
+            restaurant.type = typeTextField.text
+            restaurant.location = addressTextField.text
+            restaurant.phone = phoneTextField.text
+            restaurant.summary = descriptionTextView.text
+            restaurant.isVisited = false
+            
+            if let restaurantImage = photoImageView.image {
+                restaurant.image = restaurantImage.pngData()
+            }
+            
+            print("Saving data to context ...")
+            appDelegate.saveContext()
+        }
         
 //        dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "unwindToHome", sender: self)

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8117549259B8BBB0098ECA7 /* ResPot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8117547259B8BBB0098ECA7 /* ResPot.xcdatamodeld */; };
 		D81AA9BE2594A89400182D27 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AA9BD2594A89400182D27 /* ReviewViewController.swift */; };
+		D8549F0425A0A378008D5BA1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8549F0325A0A378008D5BA1 /* Functions.swift */; };
 		D887F4A3257CF8AA004DDE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4A2257CF8AA004DDE17 /* AppDelegate.swift */; };
 		D887F4A5257CF8AA004DDE17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4A4257CF8AA004DDE17 /* SceneDelegate.swift */; };
 		D887F4AA257CF8AA004DDE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D887F4A8257CF8AA004DDE17 /* Main.storyboard */; };
@@ -42,7 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D8117548259B8BBB0098ECA7 /* ResPot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ResPot.xcdatamodel; sourceTree = "<group>"; };
 		D81AA9BD2594A89400182D27 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		D8549F0325A0A378008D5BA1 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		D887F49F257CF8AA004DDE17 /* ResPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D887F4A2257CF8AA004DDE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D887F4A4257CF8AA004DDE17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				D887F4A4257CF8AA004DDE17 /* SceneDelegate.swift */,
 				D887F4AB257CF8AB004DDE17 /* Assets.xcassets */,
 				D887F4B0257CF8AB004DDE17 /* Info.plist */,
+				D8117547259B8BBB0098ECA7 /* ResPot.xcdatamodeld */,
+				D8549F0325A0A378008D5BA1 /* Functions.swift */,
 			);
 			path = ResPot;
 			sourceTree = "<group>";
@@ -294,6 +300,7 @@
 			files = (
 				D8E284DB2592488600F508A0 /* UINavigationController+Ext.swift in Sources */,
 				D887F4B9257D44CC004DDE17 /* RestaurantTableViewCell.swift in Sources */,
+				D8117549259B8BBB0098ECA7 /* ResPot.xcdatamodeld in Sources */,
 				D8B24C59259624A4008CA1DC /* NewRestaurantController.swift in Sources */,
 				D81AA9BE2594A89400182D27 /* ReviewViewController.swift in Sources */,
 				D8A12E95258A6E0200A198CE /* RestaurantDetailTextCell.swift in Sources */,
@@ -302,6 +309,7 @@
 				D8A12E92258A6DD200A198CE /* RestaurantDetailIconTextCell.swift in Sources */,
 				D8A12E8F258A6D8800A198CE /* RestaurantDetailHeaderView.swift in Sources */,
 				D8ADE6F125938E91008A3FC8 /* RestaurantDetailSeparatorCell.swift in Sources */,
+				D8549F0425A0A378008D5BA1 /* Functions.swift in Sources */,
 				D8ADE6F425939079008A3FC8 /* RestaurantDetailMapCell.swift in Sources */,
 				D8F432072587D99100F7806D /* RestaurantDetailViewController.swift in Sources */,
 				D8B24C5625961010008CA1DC /* RoundedTextField.swift in Sources */,
@@ -508,6 +516,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8117547259B8BBB0098ECA7 /* ResPot.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8117548259B8BBB0098ECA7 /* ResPot.xcdatamodel */,
+			);
+			currentVersion = D8117548259B8BBB0098ECA7 /* ResPot.xcdatamodel */;
+			path = ResPot.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D887F497257CF8AA004DDE17 /* Project object */;
 }
