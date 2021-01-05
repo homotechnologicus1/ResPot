@@ -9,13 +9,15 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
     @IBOutlet var emptyRestaurantView: UIView!
 
     // MARK: - Properties
     var restaurants: [RestaurantMO] = []
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
+    var searchController: UISearchController!
+    var searchResults: [RestaurantMO] = []
     
     // MARK: - View controller life cycle
     
@@ -31,6 +33,17 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont ]
         }
+        
+        // Adding a search bar
+        searchController = UISearchController(searchResultsController: nil)
+//        self.navigationItem.searchController = searchController
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.barTintColor = .green
+        searchController.searchBar.backgroundImage = UIImage()
+        searchController.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
         
         // Prepare the empty view
         tableView.backgroundView = emptyRestaurantView
@@ -63,6 +76,22 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         navigationController?.hidesBarsOnSwipe = true
         navigationController?.navigationBar.barStyle = .default
+        
+        navigationController?.navigationBar.tintColor = .label
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            walkthroughViewController.modalPresentationStyle = .fullScreen
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
     }
     
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
@@ -84,8 +113,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return restaurants.count
+        if searchController.isActive {
+            return searchResults.count
+        } else {
+            return restaurants.count
+        }
     }
 
     
@@ -93,16 +125,19 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         let cellIdentifier = "Cell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
+        
+        // Determine if we get the restaurant from search result or the original array
+        let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
 
         // Configure the cell...
-        cell.nameLabel.text = restaurants[indexPath.row].name
-        if let restaurantImage = restaurants[indexPath.row].image {
+        cell.nameLabel.text = restaurant.name
+        if let restaurantImage = restaurant.image {
             cell.thumbnailImageView.image = UIImage(data: restaurantImage as Data)
         }
-        cell.locationLabel.text = restaurants[indexPath.row].location
-        cell.typeLabel.text = restaurants[indexPath.row].type
+        cell.locationLabel.text = restaurant.location
+        cell.typeLabel.text = restaurant.type
         
-        cell.heartImageView.isHidden = restaurants[indexPath.row].isVisited ? false : true
+        cell.heartImageView.isHidden = restaurant.isVisited ? false : true
 
         return cell
     }
@@ -173,13 +208,21 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         return swipeConfiguration
     }
     
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if searchController.isActive {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
                 
-                destinationController.restaurant = restaurants[indexPath.row]
+                destinationController.restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
             }
         }
     }
@@ -216,6 +259,26 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+    }
+    
+    // MARK: - Helper methods
+    
+    func filterContent(for searchText: String) {
+        searchResults = restaurants.filter({ (restaurant) -> Bool in
+            if let name = restaurant.name, let location = restaurant.location {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+            }
+            
+            return false
+        })
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
     }
 
 }
