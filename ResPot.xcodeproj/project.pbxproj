@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D8117549259B8BBB0098ECA7 /* ResPot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8117547259B8BBB0098ECA7 /* ResPot.xcdatamodeld */; };
 		D81AA9BE2594A89400182D27 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AA9BD2594A89400182D27 /* ReviewViewController.swift */; };
+		D82C66AF25AB35510025B42A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82C66AE25AB35510025B42A /* CloudKit.framework */; };
+		D82C66B225AB727E0025B42A /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82C66B125AB727E0025B42A /* DiscoverTableViewController.swift */; };
 		D8549F0425A0A378008D5BA1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8549F0325A0A378008D5BA1 /* Functions.swift */; };
 		D887F4A3257CF8AA004DDE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4A2257CF8AA004DDE17 /* AppDelegate.swift */; };
 		D887F4A5257CF8AA004DDE17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4A4257CF8AA004DDE17 /* SceneDelegate.swift */; };
@@ -54,6 +56,9 @@
 /* Begin PBXFileReference section */
 		D8117548259B8BBB0098ECA7 /* ResPot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ResPot.xcdatamodel; sourceTree = "<group>"; };
 		D81AA9BD2594A89400182D27 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		D82C66AC25AB35470025B42A /* ResPot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResPot.entitlements; sourceTree = "<group>"; };
+		D82C66AE25AB35510025B42A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D82C66B125AB727E0025B42A /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		D8549F0325A0A378008D5BA1 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		D887F49F257CF8AA004DDE17 /* ResPot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResPot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D887F4A2257CF8AA004DDE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8ADE6EE25932D0C008A3FC8 /* MapKit.framework in Frameworks */,
+				D82C66AF25AB35510025B42A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,7 @@
 		D887F4A1257CF8AA004DDE17 /* ResPot */ = {
 			isa = PBXGroup;
 			children = (
+				D82C66AC25AB35470025B42A /* ResPot.entitlements */,
 				D8E284D6259229FA00F508A0 /* Extensions */,
 				D8A12E71258A5C1600A198CE /* Resources */,
 				D8DBCCFE258A498300D1F125 /* Storyboard */,
@@ -176,6 +183,7 @@
 		D8ADE6EC25932D0C008A3FC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D82C66AE25AB35510025B42A /* CloudKit.framework */,
 				D8EEBA1525AA2D880086C352 /* WebKit.framework */,
 				D8ADE6ED25932D0C008A3FC8 /* MapKit.framework */,
 			);
@@ -195,6 +203,7 @@
 				D8B59F2D25A36872006C76E2 /* WalkthroughViewController.swift */,
 				D8EEBA0F25A756720086C352 /* AboutTableViewController.swift */,
 				D8EEBA1225AA16740086C352 /* WebViewController.swift */,
+				D82C66B125AB727E0025B42A /* DiscoverTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 				D8E284DB2592488600F508A0 /* UINavigationController+Ext.swift in Sources */,
 				D887F4B9257D44CC004DDE17 /* RestaurantTableViewCell.swift in Sources */,
 				D8117549259B8BBB0098ECA7 /* ResPot.xcdatamodeld in Sources */,
+				D82C66B225AB727E0025B42A /* DiscoverTableViewController.swift in Sources */,
 				D8B59F2825A33C33006C76E2 /* WalkthroughContentViewController.swift in Sources */,
 				D8B24C59259624A4008CA1DC /* NewRestaurantController.swift in Sources */,
 				D81AA9BE2594A89400182D27 /* ReviewViewController.swift in Sources */,
@@ -504,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ResPot/ResPot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q5CYH8RVUS;
 				INFOPLIST_FILE = ResPot/Info.plist;
@@ -522,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ResPot/ResPot.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q5CYH8RVUS;
 				INFOPLIST_FILE = ResPot/Info.plist;
