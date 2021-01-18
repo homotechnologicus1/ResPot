@@ -1,0 +1,87 @@
+/* Class = "UILabel"; text = "ADDRESS"; ObjectID = "1mK-HA-fbQ"; */
+"1mK-HA-fbQ.text" = "주소";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant address"; ObjectID = "4UR-RO-2dS"; */
+"4UR-RO-2dS.placeholder" = "맛집주소를 입력하세요";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "4Wh-wL-VIe"; */
+"4Wh-wL-VIe.title" = "항목";
+
+/* Class = "UILabel"; text = "NAME"; ObjectID = "7rN-TG-xhI"; */
+"7rN-TG-xhI.text" = "이름";
+
+/* Class = "UIButton"; normalTitle = "Sad"; ObjectID = "15g-Sr-Pcm"; */
+"15g-Sr-Pcm.normalTitle" = "슬픔";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "83P-6w-YUA"; */
+"83P-6w-YUA.text" = "유형";
+
+/* Class = "UINavigationItem"; title = "ResPot"; ObjectID = "C4K-Mo-Vnd"; */
+"C4K-Mo-Vnd.title" = "맛집";
+
+/* Class = "UIButton"; normalTitle = "Cool"; ObjectID = "cM4-g1-yLO"; */
+"cM4-g1-yLO.normalTitle" = "멋짐";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant type"; ObjectID = "d5f-Bh-ah0"; */
+"d5f-Bh-ah0.placeholder" = "맛집유형";
+
+/* Class = "UIButton"; normalTitle = "Love"; ObjectID = "DjN-C1-EGc"; */
+"DjN-C1-EGc.normalTitle" = "사랑";
+
+/* Class = "UIButton"; normalTitle = "Rate it"; ObjectID = "EFt-oe-jw7"; */
+"EFt-oe-jw7.normalTitle" = "평가하기";
+
+/* Class = "UIButton"; normalTitle = "Happy"; ObjectID = "F1e-rJ-eGZ"; */
+"F1e-rJ-eGZ.normalTitle" = "행복";
+
+/* Class = "UILabel"; text = "Type Label"; ObjectID = "ii1-AX-70g"; */
+"ii1-AX-70g.text" = "유형레이블";
+
+/* Class = "UILabel"; text = "TYPE"; ObjectID = "iJZ-9k-i5U"; */
+"iJZ-9k-i5U.text" = "유형";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant phone"; ObjectID = "jfJ-ef-IVE"; */
+"jfJ-ef-IVE.placeholder" = "맛집 전화번호 입력";
+
+/* Class = "UITextView"; text = "A great restaurant to try out"; ObjectID = "jR2-MN-2vw"; */
+"jR2-MN-2vw.text" = "맛집탐방";
+
+/* Class = "UIButton"; normalTitle = "Angry"; ObjectID = "jzw-SS-fqO"; */
+"jzw-SS-fqO.normalTitle" = "화남";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "MIL-dk-bzq"; */
+"MIL-dk-bzq.text" = "레이블";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "OaP-rI-u7B"; */
+"OaP-rI-u7B.text" = "이름";
+
+/* Class = "UILabel"; text = "PHONE"; ObjectID = "oOL-hH-vJF"; */
+"oOL-hH-vJF.text" = "전화번호";
+
+/* Class = "UILabel"; text = "Subsection Title"; ObjectID = "PkS-DX-ZeC"; */
+"PkS-DX-ZeC.text" = "부타이틀";
+
+/* Class = "UILabel"; text = "Name Label"; ObjectID = "Sl9-mn-btX"; */
+"Sl9-mn-btX.text" = "이름";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "thk-bJ-8Y9"; */
+"thk-bJ-8Y9.title" = "항목";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "UBy-dv-3Vj"; */
+"UBy-dv-3Vj.text" = "장소";
+
+/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "UQ5-6Z-KVA"; */
+"UQ5-6Z-KVA.title" = "선호목록";
+
+/* Class = "UINavigationItem"; title = "New Restaurant"; ObjectID = "uYR-jv-PO1"; */
+"uYR-jv-PO1.title" = "새 맛집 입력";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wat-BO-FVh"; */
+"Wat-BO-FVh.text" = "레이블";
+
+/* Class = "UITextField"; placeholder = "Fill in the restaurant name"; ObjectID = "XJ1-1R-SLZ"; */
+"XJ1-1R-SLZ.placeholder" = "맛집이름 입력하기";
+
+/* Class = "UILabel"; text = "DESCRIPTION"; ObjectID = "Z9x-6k-TH1"; */
+"Z9x-6k-TH1.text" = "상세";
+

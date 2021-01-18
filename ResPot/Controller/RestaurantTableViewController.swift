@@ -146,7 +146,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "Delete")) { (action, sourceView, completionHandler) in
             // Delete the row from the data source
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 let context = appDelegate.persistentContainer.viewContext
@@ -160,8 +160,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             completionHandler(true)
         }
         
-        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
-            let defaultText = "Just checking in at " + self.restaurants[indexPath.row].name!
+        let shareAction = UIContextualAction(style: .normal, title: NSLocalizedString("Share", comment: "Share")) { (action, sourceView, completionHandler) in
+            let defaultText = NSLocalizedString("Just checking in at ", comment: "Just checking in at ") + NSLocalizedString(self.restaurants[indexPath.row].name!, comment: self.restaurants[indexPath.row].name!)
             
             let activityController: UIActivityViewController
             if let restaurantImage = self.restaurants[indexPath.row].image, let imageToShare = UIImage(data: restaurantImage as Data) {
@@ -192,7 +192,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let checkInAction = UIContextualAction(style: .normal, title: "Check-in") { (action, sourceView, completionHandler) in
+        let checkInAction = UIContextualAction(style: .normal, title: NSLocalizedString("Check-in", comment: "Check-in")) { (action, sourceView, completionHandler) in
             let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
             self.restaurants[indexPath.row].isVisited = (self.restaurants[indexPath.row].isVisited) ? false : true
             cell.heartImageView.isHidden = self.restaurants[indexPath.row].isVisited ? false : true

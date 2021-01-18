@@ -1,0 +1,9 @@
+/* Class = "UILabel"; text = "Title"; ObjectID = "8cd-vq-v4s"; */
+"8cd-vq-v4s.text" = "제목";
+
+/* Class = "UINavigationItem"; title = "About"; ObjectID = "wEp-83-aSh"; */
+"wEp-83-aSh.title" = "어바웃";
+
+/* Class = "UITabBarItem"; title = "About"; ObjectID = "wu8-We-JCH"; */
+"wu8-We-JCH.title" = "어바웃탭";
+

@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import SwiftUI
 
 class DiscoverTableViewController: UITableViewController {
     
@@ -196,4 +197,10 @@ class DiscoverTableViewController: UITableViewController {
         
     }
 
+}
+
+struct DiscoverTableViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }

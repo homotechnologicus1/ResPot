@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "HEADING"; ObjectID = "8fc-vP-b3z"; */
+"8fc-vP-b3z.text" = "제목";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "8g4-V2-VSQ"; */
+"8g4-V2-VSQ.normalTitle" = "다음";
+
+/* Class = "UILabel"; text = "Subheading"; ObjectID = "TSb-SG-Huv"; */
+"TSb-SG-Huv.text" = "부제목";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "cdB-Oo-3dH"; */
+"cdB-Oo-3dH.normalTitle" = "건너뛰기";
