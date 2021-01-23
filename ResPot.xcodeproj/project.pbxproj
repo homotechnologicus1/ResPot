@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D8117549259B8BBB0098ECA7 /* ResPot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8117547259B8BBB0098ECA7 /* ResPot.xcdatamodeld */; };
 		D81AA9BE2594A89400182D27 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81AA9BD2594A89400182D27 /* ReviewViewController.swift */; };
-		D82C66AF25AB35510025B42A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D82C66AE25AB35510025B42A /* CloudKit.framework */; };
 		D82C66B225AB727E0025B42A /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82C66B125AB727E0025B42A /* DiscoverTableViewController.swift */; };
 		D8549F0425A0A378008D5BA1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8549F0325A0A378008D5BA1 /* Functions.swift */; };
 		D887F4A3257CF8AA004DDE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D887F4A2257CF8AA004DDE17 /* AppDelegate.swift */; };
@@ -39,6 +38,7 @@
 		D8ADE6F72593AAC8008A3FC8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8ADE6F62593AAC8008A3FC8 /* MapViewController.swift */; };
 		D8B24C5625961010008CA1DC /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B24C5525961010008CA1DC /* RoundedTextField.swift */; };
 		D8B24C59259624A4008CA1DC /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B24C58259624A4008CA1DC /* NewRestaurantController.swift */; };
+		D8B3743425B9DB69001F37BA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B3743325B9DB69001F37BA /* UserNotifications.framework */; };
 		D8B59F2825A33C33006C76E2 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B59F2725A33C33006C76E2 /* WalkthroughContentViewController.swift */; };
 		D8B59F2B25A34293006C76E2 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B59F2A25A34293006C76E2 /* WalkthroughPageViewController.swift */; };
 		D8B59F2E25A36872006C76E2 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B59F2D25A36872006C76E2 /* WalkthroughViewController.swift */; };
@@ -92,6 +92,7 @@
 		D8ADE6F62593AAC8008A3FC8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D8B24C5525961010008CA1DC /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		D8B24C58259624A4008CA1DC /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
+		D8B3743325B9DB69001F37BA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		D8B59F2725A33C33006C76E2 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		D8B59F2A25A34293006C76E2 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		D8B59F2D25A36872006C76E2 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
@@ -119,8 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B3743425B9DB69001F37BA /* UserNotifications.framework in Frameworks */,
 				D8ADE6EE25932D0C008A3FC8 /* MapKit.framework in Frameworks */,
-				D82C66AF25AB35510025B42A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +196,7 @@
 		D8ADE6EC25932D0C008A3FC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8B3743325B9DB69001F37BA /* UserNotifications.framework */,
 				D82C66AE25AB35510025B42A /* CloudKit.framework */,
 				D8EEBA1525AA2D880086C352 /* WebKit.framework */,
 				D8ADE6ED25932D0C008A3FC8 /* MapKit.framework */,
